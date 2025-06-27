@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bubbfudgbufbgubgfubggfbgubfdfubg</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .plyr__video-embed {
+      width: 100%;
+      max-width: 2000px;
+      aspect-ratio: 16 / 9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom YouTube Player Embed -->
+  <div class="plyr__video-embed" id="player">
+    <iframe
+      src="https://www.youtube.com/embed/kUMblM8qec0?origin=https://yourdomain.com&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&controls=0"
+      allowfullscreen
+      allowtransparency
+      allow="autoplay"
+    ></iframe>
+  </div>
+
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script>
+    const player = new Plyr('#player', {
+      youtube: {
+        noCookie: true,       // privacy mode
+        modestbranding: 1,    // minimal YouTube branding
+        rel: 0                // no related videos at end
+      }
+    });
+  </script>
+
+</body>
+</html>
